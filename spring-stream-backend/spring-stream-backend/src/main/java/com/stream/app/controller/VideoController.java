@@ -89,7 +89,9 @@ public class VideoController {
 
     // stream video in chunks
     @GetMapping("/stream/range/{videoId}")
-    public ResponseEntity<Resource> streamVideoRange(@PathVariable String videoId, @RequestHeader(value = "Range", required = false) String range) {
+    public ResponseEntity<Resource> streamVideoRange(@PathVariable String videoId,
+                                                     @RequestHeader(value = "Range", required = false) String range
+    ) {
         System.out.println(range);
         //
 
